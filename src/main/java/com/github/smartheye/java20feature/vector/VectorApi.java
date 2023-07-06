@@ -33,8 +33,8 @@ public class VectorApi {
   public static float[] floatComputation(float[] w, float[] x, float[] b) {
     final int size = x.length;
     float[] result = new float[size];
-    int loop = FLOAT_PREFERRED_SPECIES.loopBound(size);
-    int speciesLength = FLOAT_PREFERRED_SPECIES.length();
+    final int loop = FLOAT_PREFERRED_SPECIES.loopBound(size);
+    final int speciesLength = FLOAT_PREFERRED_SPECIES.length();
     int i = 0;
     for (; i < loop; i += speciesLength) {
       FloatVector va = FloatVector.fromArray(FLOAT_PREFERRED_SPECIES, w, i);
@@ -55,8 +55,8 @@ public class VectorApi {
   public static double floatDotProduction(float[] x1, float[] x2) {
     double sum = 0;
     final int size = x2.length;
-    int loop = FLOAT_PREFERRED_SPECIES.loopBound(size);
-    int speciesLength = FLOAT_PREFERRED_SPECIES.length();
+    final int loop = FLOAT_PREFERRED_SPECIES.loopBound(size);
+    final int speciesLength = FLOAT_PREFERRED_SPECIES.length();
     int i = 0;
     for (; i < loop; i += speciesLength) {
       FloatVector vx1 = FloatVector.fromArray(FLOAT_PREFERRED_SPECIES, x1, i);
